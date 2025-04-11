@@ -1,69 +1,69 @@
-# Zalmotek RA2E1 Feather Blink
+# Zalmotek RA2E1 Feather Digital Blink
 
-A simple LED blink example for the Zalmotek RA2E1 Feather board powered by Renesas RA2E1 microcontroller.
+A digital pin blinking demonstration for the Zalmotek RA2E1 Feather board powered by Renesas RA2E1 microcontroller.
 
 ## Overview
 
-This project demonstrates the basic functionality of the Zalmotek RA2E1 Feather board by blinking the onboard LEDs. It showcases simple GPIO control using the Renesas RA2E1 microcontroller, with the LEDs toggling at a 200ms interval.
+This project demonstrates sequential blinking of digital pins on the Zalmotek RA2E1 Feather board. It cycles through pins D5, D6, D7, D9, D10, D11, D12, and D13, turning each on and off with a 200ms delay between state changes.
 
 ## Hardware Requirements
 
 - Zalmotek RA2E1 Feather board 
 - USB cable for power and programming
+- Optional: LEDs and resistors connected to digital pins
 
 ## Software Requirements
 
 - Renesas e² studio IDE
-- Renesas FSP (Flexible Software Package)
-- J-Link debugger software
+- FSP (Flexible Software Package)
+- Renesas RA2E1 toolchain
 
 ## Features
 
-- Simple LED blinking demonstration
-- Utilizes Renesas RA FSP for GPIO control
-- 200ms toggle interval for clear visual feedback
-- SEGGER RTT support for debug output
+- Sequential digital pin control
+- Configurable delay between pin state changes
+- Detailed pin state feedback via debug console
+- Utilizes Renesas FSP for hardware abstraction
 
 ## Code Functionality
 
 The main application:
-- Initializes the I/O ports using R_IOPORT_Open
-- Enables pin access with R_BSP_PinAccessEnable
-- Toggles all onboard LEDs between high and low states
-- Uses a 200ms delay between state changes
-- Runs in a continuous loop
+- Initializes GPIO pins (D5, D6, D7, D9, D10, D11, D12, D13)
+- Sequentially toggles each pin from LOW to HIGH
+- Implements a 200ms delay between state changes
+- Operates in a continuous loop mode
+- Outputs pin state changes via debug console
 
 ## Getting Started
 
 ### Setup
 
-1. Clone or download this repository
-2. Open e² studio IDE
-3. Import the project into your workspace
-4. Build the project
-5. Connect the RA2E1 Feather board via USB
-6. Program the board using the J-Link debugger
+1. Connect the Zalmotek RA2E1 Feather board to your computer via USB
+2. Open the project in Renesas e² studio
+3. Build the project
+4. Flash the program to the board
+5. Observe the sequential blinking pattern on the pins
 
 ### Configuration
 
-The LED blink rate can be modified by changing the delay value:
+To modify the delay between pin state changes:
 
 ```c
-// Change this value to adjust blink speed (in milliseconds)
-R_BSP_SoftwareDelay(200, bsp_delay_units);
+// Change the delay value (in milliseconds)
+delay(200);
 ```
 
 ## Project Structure
 
-- `src/hal_entry.cpp`: Main application code with LED blinking implementation
-- `src/common_utils.h`: Common utilities and definitions for the project
-- `src/SEGGER_RTT/`: SEGGER RTT implementation for debug output
-- `.settings/`: Project configuration files
-- `configuration.xml`: FSP configuration file
+- `src/hal_entry.cpp`: Main application code with pin control logic
+- `src/common_utils.h`: Utility functions and definitions
+- `src/SEGGER_RTT/`: Debug output functionality
+- `.settings/`: IDE configuration files
+- `script/`: Build and flash scripts
 
 ## License
 
-Renesas Electronics Corporation Proprietary
+[License information]
 
 ## Additional Resources
 
