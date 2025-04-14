@@ -6,7 +6,7 @@ Here you'll find all the resources you need to get up and running quickly.
 
 ## 🪶 What is the RA2E1 Feather SoM?
 
-The <a href="https://www.renesas.com/us/en/products/microcontrollers-microprocessors/ra-cortex-m-mcus/ra2e1-48mhz-arm-cortex-m23-entry-level-microcontroller">Renesas RA2E1</a> is designed for low power applications, featuring the Arm® Cortex®-M23 CPU core with a maximum operating frequency of 48 MHz. It's ideal for IoT devices and battery-powered applications requiring efficient operation and enhanced security features.
+The <a href="https://www.renesas.com/en/products/microcontrollers-microprocessors/ra-cortex-m-mcus/ra2e1-48mhz-arm-cortex-m23-entry-level-general-purpose-microcontroller">Renesas RA2E1</a> is designed for low-power applications, featuring the Arm® Cortex®-M23 CPU core with a maximum operating frequency of 48 MHz. It's ideal for IoT devices and battery-powered applications requiring efficient operation and enhanced security features.
 
 The Feather SoM incorporates the classic Feather features: GPIOs (analog and digital), I2C and SPI communication pins, UART pins, a LiPo battery power plug, and the USB programming port. The SoM also features a USB Type-C for powering the board and for USB debug upload, making it perfect for portable and secure IoT projects.
 
